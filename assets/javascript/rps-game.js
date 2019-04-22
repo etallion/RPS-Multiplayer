@@ -27,6 +27,11 @@
  
    console.log("ROOT DATA: ", snapshot.val());
    
+   // If Firebase has a highPrice and highBidder stored (first case)
+  if (snapshot.child("highBidder").exists() && snapshot.child("highPrice").exists()) {
+  } else{
+
+  }
    //Players makes selection
 
    //If Both Players have select
@@ -164,4 +169,15 @@
        tiesText.textContent = "ties: " + ties;
      }
    };
+
+function newUser(count){
+    if(newUser === 1){
+        //let user no they are Player 1
+        console.log("you are player 1");
+    } else if (newUser === 2){
+        //let user know they are Player 2
+        console.log("you are player 2");
+    }
+}
+
 });

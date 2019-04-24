@@ -20,7 +20,7 @@
  }
  
  // --------------------------------------------------------------
- 
+ var myGameRef = firebase.database().ref('users/rps/game');
  // At the initial load and subsequent value changes, get a snapshot of the stored data.
  // This function allows you to update your page in real-time when the firebase database changes.
  database.ref().on("value", function(snapshot) {
@@ -80,47 +80,7 @@
   
   });
 
-  $("#IamPlayer1").on("click", function(event) {
-    // Prevent form from submitting
-    event.preventDefault();
-    console.log('Hey there');
-  
-    iAmPlayer = 1;
 
-    $("#player2Div").empty();
-    $("#player1Div").empty();
-    $("#player1Div").html("You are Player 1");
-    $("#player2Div").html("Waiting for Player 2");
-    gameObj.isPlayer1Selected = true;
-
-    database.ref().set(gameObj);
-
-    if(gameObj.isPlayer2Selected === true){
-        //start game
-    }
-  
-  });
-
-  $("#IamPlayer2").on("click", function(event) {
-    // Prevent form from submitting
-    event.preventDefault();
-  
-    iAmPlayer = 2;
-
-    $("#player2Div").empty();
-    $("#player1Div").empty();
-    $("#player1Div").html("Waiting for Player 1");
-    $("#player2Div").html("You are Player 2");
-
-    gameObj.isPlayer2Selected = true;
-
-    database.ref().set(gameObj);
-
-    if(gameObj.isPlayer1Selected === true){
-        //start game
-    }
-  
-  });
  
    
    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
@@ -180,4 +140,40 @@ function newUser(count){
     }
 }
 
+
+
 });
+
+function player1Joined(){
+    console.log("Player 1 has now joined");
+    iAmPlayer = 1;
+
+   
+    
+    $("#player1Div").empty();
+    $("#player1Div").html("You are Player 1");
+    $("#player2Div").html("Waiting for Player 2");
+    gameObj.isPlayer1Selected = true;
+
+   myGameRef.set(gameObj);
+
+};
+
+function player2Joined(){
+    console.log("Player 2 has now joined");
+    iAmPlayer = 2;
+    $("#player1Div").html("Player 1 Ready");
+    $("#player2Div").empty();
+   
+    $("#player2Div").html('You are Player 2, select : <br><button type="button" class="btn btn-lg btn-primary" data-value="rock">ROCK</button><br><button type="button"  class="btn btn-lg btn-success" data-value="paper">PAPER</button><br><button type="button" class="btn btn-lg btn-danger" data-value="scissors">SCISSORS</button>');
+    
+
+
+    gameObj.isPlayer2Selected = true;
+
+    myGameRef.set(gameObj);
+};
+
+function tryAgainLater(){
+    console.log("Sorry, game in progress, try again later.")
+};

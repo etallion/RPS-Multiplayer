@@ -12,13 +12,17 @@ header{
     width: 100%;
 }
 
+.myTitle{
+    /* width: 100%; */
+}
+
 #mainGameDiv{
     width: 100%;
     height: 85%;
 }
 
 #statsDiv{
-    width:100%;
+    /* width:100%; */
     background-color: beige;
 }
 
@@ -35,7 +39,7 @@ header{
     
 }
 #playerDiv{
-    width: 100%;
+    /* width: 100%; */
     height: 50%;
     background-color: pink;
 }
@@ -47,6 +51,15 @@ header{
     bottom: 0px;
 }
 
+#gameContainer{
+    background-color: blueviolet;
+    width: 100%;
+   
+}
+
 .form-inline{
     width :100%;
+}
+span{
+    padding: 0px;
 }

@@ -23,25 +23,30 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <div class="container">
+    <div class="" id="gameContainer">
+        <div class="container" id="mainGameDiv">
 
-        <div class="row" id="mainGameDiv">
-            <div class="col">
-                 <header class="row"><div class="col"><h6>Rock Paper Scissors</h6></div></header>
+            <div class="row" >
+               
+                    <header class="col  myTitle">
+                        <div class=""><h6>Rock Paper Scissors</h6></div>
+                    </header>
+                </div>
+                
+                <div class="row" id="statsDiv">
+                    <span class="col">Player:</span><span class="col" id="playerNum"></span>
+                    <span class="col">Wins:</span><span class="col" id="wins"></span>
+                    <span class="col">Losses:</span><span class="col" id="losses"></span>
+                    <span class="col">Ties:</span><span class="col" id="ties"></span>
+                </div>
             
-            <div class="row" id="statsDiv">
-               <span class="col">Player:</span><span class="col" id="playerNum"></span>
-               <span class="col">Wins:</span><span class="col" id="wins"></span>
-               <span class="col">Losses:</span><span class="col" id="losses"></span>
-               <span class="col">Ties:</span><span class="col" id="ties"></span>
-            </div>
-          
-            <div class="row" id="playerDiv">
-                <p>Loading</p>
-            </div>
-         </div>
-        </div> <!-- End of mainGameDiv -->
-    </div>
+                <div class="row" id="playerDiv">
+                    <p>Loading</p>
+                </div>
+    
+            </div> <!-- End of mainGameDiv -->
+        </div>
+    </div> <!-- Endo of gameContainer-->
 
     <div class="" id="messageContainer">
         <div class="container" id="messagesDiv">

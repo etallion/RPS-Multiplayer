@@ -1,0 +1,52 @@
+.container{
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width : 100%;
+    background-color: black;
+}
+
+header{
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
+}
+
+#mainGameDiv{
+    width: 100%;
+    height: 85%;
+}
+
+#statsDiv{
+    width:100%;
+    background-color: beige;
+}
+
+#messagesDiv{
+
+    height: 15%;
+    width: 100%;
+    background-color: orange;
+    text-align: left;
+}
+#messageBox{
+    width: 100%;
+    overflow: hidden;
+    
+}
+#playerDiv{
+    width: 100%;
+    height: 50%;
+    background-color: pink;
+}
+
+#messageContainer{
+    background-color: blueviolet;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.form-inline{
+    width :100%;
+}

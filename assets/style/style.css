@@ -35,7 +35,8 @@ header{
 }
 #messageBox{
     width: 100%;
-    overflow: hidden;
+    height: 70px;
+    overflow: auto;
     
 }
 #playerDiv{
@@ -63,3 +64,28 @@ header{
 span{
     padding: 0px;
 }
+
+.my-form-inline{
+    display: inline-block;
+}
+
+.form-control{
+    width: 100%;
+}
+
+form {
+    position: relative;
+    width: 100%;
+  }
+  
+  input {
+    width: 100%;
+    padding-right: 60px;
+  }
+  
+  button {
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

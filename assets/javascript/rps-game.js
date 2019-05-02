@@ -46,6 +46,23 @@
 
  $(document).ready(function (){
 
+  $("#chatBtn").on("click", function(event){
+    event.preventDefault();
+    
+    var $newMessage = $("#newMessageText");
+    var $messageBox =  $("#messageBox");
+
+    if($newMessage.val() != ''){
+      var playerLabel = "Player" + iAmPlayer;
+      displayNewMessage($newMessage.val(), playerLabel);
+      $newMessage.attr('placeholder', 'chat here');
+      
+      var height = $messageBox[0].scrollHeight;
+      $messageBox.scrollTop(height);
+    };
+
+  });
+
  // Whenever a user clicks their rock, paper, scissor selection
  $("#playerDiv").on("click", ".playerChoice", function(event) {
    // Prevent form from submitting
